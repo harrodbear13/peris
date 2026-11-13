@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Times New Roman', serif;
+  background: linear-gradient(135deg, #ffe6f0, #ffd6eb, #ffc2e2);
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.hero-image {
+  width: 90%;
+  max-width: 900px;
+  height: auto;
+  margin: 40px auto;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(255, 105, 180, 0.4);
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.links {
+  padding: 40px 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 15px;
+  font-size: 18px;
+  color: white;
+  background-color: #ff69b4;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.button:hover {
+  background-color: #ff1493;
+  transform: scale(1.07);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+</style>
+</head>
+
+<body>
+
+<img src="peri1.png" alt="Us" class="hero-image">
+
+<div class="links">
+
+  <!-- Letter Button -->
+  <a class="button" onclick="checkLetterPassword()">Your Letter</a>
+
+  <!-- Playlist Button -->
+  <a class="button" onclick="checkPlaylistPassword()">Your Playlist</a>
+
+</div>
+
+<script>
+function checkLetterPassword() {
+  let password = prompt("First Date (MMDDYYYY)");
+  if (password === "08282026") {
+    window.location.href = "letter.html";
+  } else {
+    alert("Are you really Peri?");
+  }
+}
+
+function checkPlaylistPassword() {
+  let password = prompt("What color cat are you?");
+  if (password && password.trim().toLowerCase() === "orange") {
+    window.open("https://open.spotify.com/playlist/2MF5itZbIN2t3UEuHe0Msz?si=253f57c8e1794990&pt=e45d3fca3a14d48865cf6821c3b34e4c", "_blank");
+  } else {
+    alert("Tsk tsk");
+  }
+}
+</script>
+
+</body>
+</html>
